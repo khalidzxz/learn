@@ -1,0 +1,37 @@
+---1---
+اضيف مستخم
+sudo adduser <name>
+adduser <name>
+e. 
+adduser dr
+---2---
+اعطاء صلاحية
+sudo usermod -aG sudo <name>
+usermod -aG sudo <username>
+e.
+usermod -aG sudo dr
+---3---
+تعديل 
+sshd_config
+nano /etc/ssh/sshd_config
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication yes
+علشان يقبل دخول اليوزر بالباسورد
+---4---
+من خلال التيرمنل الشخصي
+اعمل نسخ للمفتاح العام بالامر التالي
+
+ssh-copy-id -i ssh/coronakey/coronakey.pub dr@164.90.223.136
+
+شرح الامر السابق
+
+ssh-copy-id -i
+
+المسار داخل جهازي
+ssh/coronakey/coronakey.pub
+التوثيق
+dr@164.90.223.136
+
+ssh-copy-id -i khalid.pub zxz@164.90.223.136
+
+
