@@ -1,0 +1,48 @@
+---1---
+افتح التيرمنل على المجلد المستهدف ليكون مستودع
+
+---2---
+
+git init
+تهيئة المستودع
+
+---3---
+
+git status
+
+---4---
+
+git add .
+or
+git add <nameFile.ex>
+git add <nameFile.ex> <nameFile.ex>
+
+---5---
+
+git commit -m <nameFile.ex> "namecommit"
+
+---6---
+
+git log
+
+e.
+commit a2d445a4cc3f608e022d80c922205675feeea861 (HEAD -> master)
+Author: username <yourmail@gmail.com>
+Date:   Sat Aug 1 17:26:07 2020 +0300
+
+    v1
+
+
+---7---
+
+
+git checkout a2d445a4cc3 .
+
+
+---8---
+
+git remote add origin https://github.com/Nameuser/repositoryName.git
+
+---9---
+
+git push -u origin master

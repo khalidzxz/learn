@@ -21,7 +21,7 @@ PasswordAuthentication yes
 من خلال التيرمنل الشخصي
 اعمل نسخ للمفتاح العام بالامر التالي
 
-ssh-copy-id -i ssh/coronakey/coronakey.pub dr@164.90.223.136
+ssh-copy-id -i ssh/dirctore/file.pub username@000.000.000.000
 
 شرح الامر السابق
 
@@ -30,8 +30,8 @@ ssh-copy-id -i
 المسار داخل جهازي
 ssh/coronakey/coronakey.pub
 التوثيق
-dr@164.90.223.136
+username@000.000.000.000
 
-ssh-copy-id -i khalid.pub zxz@164.90.223.136
+ssh-copy-id -i filename.pub username@000.000.000.000
 
 
