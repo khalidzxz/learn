@@ -1,0 +1,59 @@
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo systemctl status docker
+sudo apt update && sudo apt upgrade
+
+sudo usermod -aG docker $USER
+newgrp docker
+
+docker run hello-world
+
+اذا بتحذف دوكر
+#delete docker
+#docker container stop $(docker container ls -aq)
+#docker system prune -a --volumes
+#sudo apt purge docker-ce
+#sudo apt autoremove
++++++++++++++++++++++
+docker-compose --version
+**********************
+تحميل كومبس
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
++++++++++++++++++++++++++
+sudo apt update
+sudo apt install python3-pip
+pip3 --version
+
+++++++++++++
+
+تنصيب بيئه افتراضيه
+sudo apt-get install python3-venv
+انشاء مجلد
+sudo mkdir lol
+cd lol
+تشغيل بيئه افراضيه داخل مجلد
+sudo python3 -m venv env
+
+source env/bin/activate
+++++++++++++++++++++++++++++
+تحميل قواعد البيانات حسب بدون اعدادات خاصه
+docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
+
+تحميل اودو مع ( اضافة المديولات ) ..
+docker run -v /path/to/addons:/mnt/extra-addons -p 8069:8069 --name odoo --link db:db -t odoo
+
+
+للتشغيل الدائم 
+docker update --restart always db
+docker update --restart always odoo
+
+خروج من البيئه الإفتراضيه
+deactivate
