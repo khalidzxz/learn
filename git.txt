@@ -43,6 +43,13 @@ git checkout a2d445a4cc3 .
 
 git remote add origin https://github.com/Nameuser/repositoryName.git
 
+
 ---9---
 
+git config --global user.email "yourUser@yourEmail.com"
+git config --global user.name "khalidzxz"
+---10---
 git push -u origin master
+
+
+git push origin main
