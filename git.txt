@@ -48,6 +48,7 @@ git remote add origin https://github.com/Nameuser/repositoryName.git
 
 git config --global user.email "yourUser@yourEmail.com"
 git config --global user.name "khalidzxz"
+
 ---10---
 git push -u origin master
 
